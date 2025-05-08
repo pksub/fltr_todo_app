@@ -27,15 +27,12 @@ flutter_todo_app
 
 ## Installation
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/flutter_todo_app.git
-   ```
-2. Navigate to the project directory:
+
+1. Navigate to the project directory:
    ```
    cd flutter_todo_app
    ```
-3. Install the dependencies:
+2. Install the dependencies:
    ```
    flutter pub get
    ```
