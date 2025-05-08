@@ -38,19 +38,17 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text('Todo List'),
       ),
-      body: _todos.isEmpty
-          ? const Center(
-              child: Text('No todos yet. Add some!'),
-            )
-          : ListView.builder(
-              itemCount: _todos.length,
-              itemBuilder: (ctx, index) {
-                return TodoItem(
-                  todo: _todos[index],
-                  onToggle: _toggleTodoCompletion,
-                );
-              },
-            ),
+      body: ListView.builder(
+        padding: const EdgeInsets.only(bottom: 80), // 아래쪽에 여유 공간 추가
+        itemCount: _todos.isEmpty ? 0 : _todos.length,
+        itemBuilder: (ctx, index) {
+          return TodoItem(
+            todo: _todos[index],
+            onToggle: _toggleTodoCompletion,
+            index: index + 1, // 숫자 카운트를 전달
+          );
+        },
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).push(

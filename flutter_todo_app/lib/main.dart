@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'screens/home_screen.dart';
 
 void main() {
-runApp(const MyApp());
+  // debugPaintSizeEnabled = true; //디버그 디자인 위젯 경계 시각화
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
